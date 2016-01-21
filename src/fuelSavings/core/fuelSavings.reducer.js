@@ -1,6 +1,6 @@
-import {SAVE_FUEL_SAVINGS, CALCULATE_FUEL_SAVINGS} from '../constants/ActionTypes';
-import calculator from '../businessLogic/fuelSavingsCalculator';
-import dateHelper from '../businessLogic/dateHelper';
+import {SAVE_FUEL_SAVINGS, CALCULATE_FUEL_SAVINGS} from './fuelSavings.consts.js';
+import calculator from './../services/calculator.service.js';
+import dateHelper from '../../services/dateHelper.service.js';
 import objectAssign from 'object-assign';
 
 const initialState = {

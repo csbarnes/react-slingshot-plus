@@ -1,4 +1,4 @@
-import MathHelper from './mathHelper';
+import MathHelper from './mathHelper.service';
 
 class NumberFormatter {
 	static getCurrencyFormattedNumber(value) {
@@ -49,7 +49,7 @@ class NumberFormatter {
 
         return n % 1 === 0;
     }
-    
+
     static scrubFormatting(value) {
         return value.toString().replace('$', '').replace(',', '').replace('.', '');
     }

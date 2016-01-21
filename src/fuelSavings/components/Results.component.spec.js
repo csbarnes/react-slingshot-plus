@@ -1,8 +1,8 @@
 import chai from 'chai';
 import cheerio from 'cheerio';
-import FuelSavingsResults from './FuelSavingsResults';
+import Results from './Results.component';
 import React from 'react';
-import ReactDOMServer from 'react/lib/ReactDOMServer';
+import ReactDOMServer from '../../../node_modules/react/lib/ReactDOMServer';
 
 chai.should();
 
@@ -28,7 +28,7 @@ describe('Fuel Savings Calculator Results Component', () => {
 				}
 			};
 
-			var sut = React.createElement(FuelSavingsResults, props);
+			var sut = React.createElement(Results, props);
 
 			//act
 			var html = ReactDOMServer.renderToStaticMarkup(sut);
@@ -49,7 +49,7 @@ describe('Fuel Savings Calculator Results Component', () => {
 				}
 			};
 
-			var sut = React.createElement(FuelSavingsResults, props);
+			var sut = React.createElement(Results, props);
 
 			//act
 			var html = ReactDOMServer.renderToStaticMarkup(sut);

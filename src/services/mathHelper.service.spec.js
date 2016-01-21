@@ -1,5 +1,5 @@
 import chai from 'chai';
-import MathHelper from './mathHelper';
+import MathHelper from './mathHelper.service';
 
 chai.should();
 

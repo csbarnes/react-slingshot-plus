@@ -6,7 +6,7 @@ function buildHandleChange(props) {
   };
 }
 
-const FuelSavingsTextInput = (props) => {
+const TextInput = (props) => {
   const handleChange = buildHandleChange(props);
 
   return (
@@ -18,7 +18,7 @@ const FuelSavingsTextInput = (props) => {
 	);
 };
 
-FuelSavingsTextInput.propTypes = {
+TextInput.propTypes = {
 	name: PropTypes.string.isRequired,
 	onChange: PropTypes.func.isRequired,
 	placeholder: PropTypes.string,
@@ -28,4 +28,4 @@ FuelSavingsTextInput.propTypes = {
 	])
 };
 
-export default FuelSavingsTextInput;
+export default TextInput;

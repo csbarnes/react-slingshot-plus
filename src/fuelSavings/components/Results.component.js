@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
-import NumberFormatter from '../businessLogic/numberFormatter';
+import numberFormatter from '../../services/numberFormatter.service';
 
 //This is a stateless functional component. (Also known as pure or dumb component)
 //More info: https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html#stateless-functional-components
 //And https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d
 //And starter kit with more examples here: https://github.com/ericelliott/react-pure-component-starter
-const FuelSavingsResults = (props) => {
-    const savingsExist = NumberFormatter.scrubFormatting(props.savings.monthly) > 0;
+const Results = (props) => {
+    const savingsExist = numberFormatter.scrubFormatting(props.savings.monthly) > 0;
     const savingsClass = savingsExist ? 'savings' : 'loss';
     const resultLabel = savingsExist ? 'Savings' : 'Loss';
 
@@ -42,8 +42,8 @@ const FuelSavingsResults = (props) => {
 
 //Note that this odd style is utilized for propType validation for now. Must be defined *after*
 //the component is defined, which is why it's separate and down here.
-FuelSavingsResults.propTypes = {
+Results.propTypes = {
     savings: PropTypes.object.isRequired
 };
 
-export default FuelSavingsResults;
+export default Results;

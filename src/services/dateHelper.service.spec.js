@@ -1,5 +1,5 @@
 import chai from 'chai';
-import DateHelper from './dateHelper';
+import DateHelper from './dateHelper.service';
 
 chai.should();
 

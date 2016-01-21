@@ -3,8 +3,8 @@
 import React, {PropTypes} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import FuelSavingsApp from '../components/FuelSavingsApp';
-import * as FuelSavingsActions from '../actions/fuelSavingsActions';
+import FuelSavingsApp from '../fuelSavings/FuelSavings.app.js';
+import * as FuelSavingsActions from '../fuelSavings/core/fuelSavings.actions.js';
 
 class App extends React.Component {
   render() {
@@ -21,6 +21,13 @@ App.propTypes = {
   fuelSavingsAppState: PropTypes.object.isRequired
 };
 
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
+
+//////////
+
 function mapStateToProps(state) {
   return {
     fuelSavingsAppState: state.fuelSavingsAppState
@@ -32,8 +39,3 @@ function mapDispatchToProps(dispatch) {
     actions: bindActionCreators(FuelSavingsActions, dispatch)
   };
 }
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
