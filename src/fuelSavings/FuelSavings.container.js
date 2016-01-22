@@ -3,10 +3,10 @@
 import React, {PropTypes} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import FuelSavingsApp from '../fuelSavings/FuelSavings.app.js';
-import * as FuelSavingsActions from '../fuelSavings/core/fuelSavings.actions.js';
+import FuelSavingsApp from './FuelSavings.app.js';
+import * as FuelSavingsActions from './core/fuelSavings.actions.js';
 
-class App extends React.Component {
+class FuelSavingsContainer extends React.Component {
   render() {
     const { fuelSavingsAppState, actions } = this.props;
 
@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 }
 
-App.propTypes = {
+FuelSavingsContainer.propTypes = {
   actions: PropTypes.object.isRequired,
   fuelSavingsAppState: PropTypes.object.isRequired
 };
@@ -24,7 +24,7 @@ App.propTypes = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(FuelSavingsContainer);
 
 //////////
 

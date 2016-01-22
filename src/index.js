@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './config/App.container.js';
+import Root from './config/Root.container';
 import configureStore from './config/store/configureStore';
 import './styles/styles.scss'; //Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
 
@@ -9,7 +9,7 @@ const store = configureStore();
 
 render(
   <Provider store={store}>
-    <App />
+    <Root />
   </Provider>, document.getElementById('app')
 );
 
